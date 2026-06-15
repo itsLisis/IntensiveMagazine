@@ -1,7 +1,6 @@
 const contentElement = document.getElementById('content');
-const menuImages = Array.from(document.querySelectorAll('#menu img'));
+const menuListElement = document.querySelector('#menu ul');
 const headerLinks = Array.from(document.querySelectorAll('#header a'));
-const categoryByImage = new Map();
 let categories = [];
 let activeCategory = null;
 
@@ -23,6 +22,60 @@ function setHeaderTargets() {
 	});
 }
 
+function renderMediaItem(mediaItem) {
+	if (mediaItem.type === 'audio') {
+		return `
+			<div class="media-card">
+				<audio controls src="${mediaItem.src}"></audio>
+			</div>
+		`;
+	}
+
+	if (mediaItem.type === 'video') {
+		return `
+			<div class="media-card">
+				<video controls src="${mediaItem.src}"></video>
+			</div>
+		`;
+	}
+
+	return `
+		<div class="media-card">
+			<img src="${mediaItem.src}" alt="${mediaItem.alt || 'Category media'}">
+		</div>
+	`;
+}
+
+function renderMediaSection(mediaItems, fallbackAlt) {
+	if (!Array.isArray(mediaItems) || mediaItems.length === 0) {
+		return `
+			<div class="media-placeholder">
+				<img src="assets/images/maintenance_page.jpg" alt="${fallbackAlt}">
+			</div>
+		`;
+	}
+
+	return `<div class="media-grid">${mediaItems.map(renderMediaItem).join('')}</div>`;
+}
+
+function renderMenu() {
+	if (!menuListElement) {
+		return;
+	}
+
+	menuListElement.innerHTML = categories
+		.map((category) => `
+			<li>
+				<img src="${category.image}" alt="${category.label} sign" data-category-key="${category.key}" role="button" tabindex="0">
+			</li>
+		`)
+		.join('');
+}
+
+function getCategoryByKey(key) {
+	return categories.find((category) => category.key === key) || null;
+}
+
 function renderCategory(category) {
 	activeCategory = category;
 
@@ -35,16 +88,12 @@ function renderCategory(category) {
 			<section id="comic-section" class="category-section">
 				<h2>Comic</h2>
 				<p>${category.comic}</p>
-				<div class="media-placeholder">
-					<img src="assets/images/maintenance_page.jpg" alt="Maintenance page">
-				</div>
+				${renderMediaSection(category.comicMedia, 'Maintenance page')}
 			</section>
 			<section id="podcast-section" class="category-section">
 				<h2>Podcast</h2>
 				<p>${category.podcast}</p>
-				<div class="media-placeholder">
-					<img src="assets/images/maintenance_page.jpg" alt="Maintenance page">
-				</div>
+				${renderMediaSection(category.podcastMedia, 'Maintenance page')}
 			</section>
 		</article>
 	`;
@@ -56,31 +105,6 @@ function activateCategory(category) {
 	renderCategory(category);
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-
-function getCategoryFromImage(src) {
-	const imageFile = src.split('/').pop();
-	return categoryByImage.get(imageFile);
-}
-
-menuImages.forEach((image) => {
-	const category = getCategoryFromImage(image.getAttribute('src') || '');
-
-	if (!category) {
-		return;
-	}
-
-	image.style.cursor = 'pointer';
-	image.setAttribute('role', 'button');
-	image.setAttribute('tabindex', '0');
-
-	image.addEventListener('click', () => activateCategory(category));
-	image.addEventListener('keydown', (event) => {
-		if (event.key === 'Enter' || event.key === ' ') {
-			event.preventDefault();
-			activateCategory(category);
-		}
-	});
-});
 
 headerLinks.forEach((link) => {
 	link.addEventListener('click', (event) => {
@@ -96,11 +120,43 @@ headerLinks.forEach((link) => {
 	});
 });
 
+if (menuListElement) {
+	menuListElement.addEventListener('click', (event) => {
+		const image = event.target.closest('img[data-category-key]');
+
+		if (!image) {
+			return;
+		}
+
+		const category = getCategoryByKey(image.dataset.categoryKey || '');
+
+		if (category) {
+			activateCategory(category);
+		}
+	});
+
+	menuListElement.addEventListener('keydown', (event) => {
+		const image = event.target.closest('img[data-category-key]');
+
+		if (!image || (event.key !== 'Enter' && event.key !== ' ')) {
+			return;
+		}
+
+		event.preventDefault();
+
+		const category = getCategoryByKey(image.dataset.categoryKey || '');
+
+		if (category) {
+			activateCategory(category);
+		}
+	});
+}
+
 setHeaderTargets();
 
 async function loadCategories() {
 	try {
-		const response = await fetch('../assets/data/categories.json');
+		const response = await fetch('assets/data/categories.json');
 
 		if (!response.ok) {
 			throw new Error(`Failed to load categories: ${response.status}`);
@@ -113,10 +169,12 @@ async function loadCategories() {
 			{
 				key: '3t_atlas',
 				label: '3T Atlas',
-				image: '3t_atlas_sign.png',
+				image: 'assets/images/3t_atlas_sign.png',
 				title: 'A map of hidden patterns and networks that claim to explain how the world is controlled.',
 				comic: 'The comic can show the idea as a visual conspiracy board, with clues linked by arrows and symbols.',
-				podcast: 'The podcast can unpack how this narrative spreads, what people believe about it, and why it appeals.'
+				comicMedia: [],
+				podcast: 'The podcast can unpack how this narrative spreads, what people believe about it, and why it appeals.',
+				podcastMedia: []
 			}
 		];
 	}
@@ -124,32 +182,9 @@ async function loadCategories() {
 
 async function initialize() {
 	categories = await loadCategories();
-	categoryByImage.clear();
-	categories.forEach((category) => {
-		categoryByImage.set(category.image, category);
-	});
+	renderMenu();
 
 	activeCategory = categories[0] || null;
-
-	menuImages.forEach((image) => {
-		const category = getCategoryFromImage(image.getAttribute('src') || '');
-
-		if (!category) {
-			return;
-		}
-
-		image.style.cursor = 'pointer';
-		image.setAttribute('role', 'button');
-		image.setAttribute('tabindex', '0');
-
-		image.addEventListener('click', () => activateCategory(category));
-		image.addEventListener('keydown', (event) => {
-			if (event.key === 'Enter' || event.key === ' ') {
-				event.preventDefault();
-				activateCategory(category);
-			}
-		});
-	});
 
 	if (activeCategory) {
 		renderCategory(activeCategory);

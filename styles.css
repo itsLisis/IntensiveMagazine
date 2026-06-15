@@ -182,6 +182,37 @@ body {
     box-shadow: 0 10px 24px rgba(53,40,26,0.08);
 }
 
+.media-grid {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.media-card {
+    padding: 0.9rem;
+    border: 1px solid rgba(52, 44, 35, 0.12);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: 0 12px 30px rgba(53, 40, 26, 0.08);
+}
+
+.media-card img,
+.media-card audio,
+.media-card video {
+    display: block;
+    width: 100%;
+}
+
+.media-card img {
+    height: auto;
+    border-radius: 14px;
+}
+
+.media-card audio,
+.media-card video {
+    border-radius: 999px;
+}
+
 .category-view[data-category] .category-section:first-child {
     background: linear-gradient(135deg, rgba(29, 27, 25, 0.96), rgba(62, 47, 34, 0.92));
     color: #fffaf5;

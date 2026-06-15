@@ -2,51 +2,171 @@
   {
     "key": "3t_atlas",
     "label": "3T Atlas",
-    "image": "3t_atlas_sign.png",
-    "title": "3I Atlas was one of the most controversial and viral topics in science in 2025. On July 1st of that year, a telescope of the planet defense complex in Chile observed a point moving in a strange trajectory. It was called 3I Atlas, a comet coming from outer space, the third interstellar object ever discovered to be specific. Its popularity increased exponentially after the publishing of a scientific article called “Is the interstellar object 3I/ATLAS alien technology?” whose main author was Abraham Loeb (Avi Loeb), a Harvard professor who had worked on similar hypotheses before. The paper noticed that comet’s properties such as the trajectory, the angle of entering and the approaching to specific planets were particularly unlikely. Furthermore, the relative position between 3I Atlas and the Earth in its closer point to the sun, for the researchers could be perfect as an strategical pivot for starting an invasion.\n\nA few days after the publication of the article, several news articles began to flood the web. Shocking headlines like “The latest image from 3I Atlas sparks all sorts of theories while NASA remains silent”, “NASA activated the planetary defense protocol against comet 3I/ATLAS” or “Comet 3I/ATLAS revives Stephen Hawking's incredible warning about aliens” went viral in question of hours throughout all cyberspace.\n\nIn addition, although the new evidence and the data that confirmed 3I Atlas was just a strange comet, famous personalities like Elon Musk and Kim Kardashian posted in their X and Instagram profiles their own hypotheses, while Avi Loeb kept making sensationalist statements, causing even more polemics around the interstellar visitor and wave after wave of disinformation."
-    ,
+    "image": "assets/images/3t_atlas_sign.png",
+    "title": "3I Atlas was one of the most controversial and viral topics in science in 2025. On July 1st of that year, a telescope of the planet defense complex in Chile observed a point moving in a strange trajectory. It was called 3I Atlas, a comet coming from outer space, the third interstellar object ever discovered to be specific. Its popularity increased exponentially after the publishing of a scientific article called “Is the interstellar object 3I/ATLAS alien technology?” whose main author was Abraham Loeb (Avi Loeb), a Harvard professor who had worked on similar hypotheses before. The paper noticed that comet’s properties such as the trajectory, the angle of entering and the approaching to specific planets were particularly unlikely. Furthermore, the relative position between 3I Atlas and the Earth in its closer point to the sun, for the researchers could be perfect as an strategical pivot for starting an invasion.\n\nA few days after the publication of the article, several news articles began to flood the web. Shocking headlines like “The latest image from 3I Atlas sparks all sorts of theories while NASA remains silent”, “NASA activated the planetary defense protocol against comet 3I/ATLAS” or “Comet 3I/ATLAS revives Stephen Hawking's incredible warning about aliens” went viral in question of hours throughout all cyberspace.\n\nIn addition, although the new evidence and the data that confirmed 3I Atlas was just a strange comet, famous personalities like Elon Musk and Kim Kardashian posted in their X and Instagram profiles their own hypotheses, while Avi Loeb kept making sensationalist statements, causing even more polemics around the interstellar visitor and wave after wave of disinformation.",
+    "comicMedia": [],
     "comic": "Page in construction, comic goes here.",
+    "podcastMedia": [],
     "podcast": "Page in construction, podcast goes here."
   },
   {
     "key": "astrology",
     "label": "Astrology",
-    "image": "astrology_sign.png",
-    "title": "One of the most popular and ingrained traditions in Western culture is the Horoscope. A system of beliefs built upon the following thesis: The positions of the planets have the power to influence human life and we can predict what will happen to people based on it. The idea is so present in our culture that almost every radio program, newspaper, morning show, web news portal, app store or library has a section dedicated to astrology. According to a Pew Research Center’s survey, approximately 27% of the adult population in the USA do believe in Astrology and consult the horoscope frequently.\n\nClassic western astrology was born thousands of years ago in Egyptian or Babilonyan civilizations and was adapted by the Greeks as a way to understand the universe. Greeks adapted this framework of beliefs and developed the theory of modern astrology almost 2000 years ago, including zodiacal signs, their associated elements and the dates for each one.\n\nHowever, astrology is not more than a pseudoscientific theory. There is no evidence that proves the predictions are accurate at all. On the contrary, studies have proven astrology does not work better than randomness. Also, the supposed accurate results coming from horoscopes correspond to psychological phenomena such as the Barnum or Forer effect which suggest that vague descriptions are capable of fitting for almost any person.\n\nMoreover, due to the dynamic movements of the Earth and solar system around the galaxy, stars never stay quiet in the same place, so that planets never pass through the same constellation after a couple thousand years. Then, the zodiacal signs we have are wrong, because our sky is not the same sky Greeks observed millennia ago."
-    ,
+    "image": "assets/images/astrology_sign.png",
+    "title": "One of the most popular and ingrained traditions in Western culture is the Horoscope. A system of beliefs built upon the following thesis: The positions of the planets have the power to influence human life and we can predict what will happen to people based on it. The idea is so present in our culture that almost every radio program, newspaper, morning show, web news portal, app store or library has a section dedicated to astrology. According to a Pew Research Center’s survey, approximately 27% of the adult population in the USA do believe in Astrology and consult the horoscope frequently.\n\nClassic western astrology was born thousands of years ago in Egyptian or Babilonyan civilizations and was adapted by the Greeks as a way to understand the universe. Greeks adapted this framework of beliefs and developed the theory of modern astrology almost 2000 years ago, including zodiacal signs, their associated elements and the dates for each one.\n\nHowever, astrology is not more than a pseudoscientific theory. There is no evidence that proves the predictions are accurate at all. On the contrary, studies have proven astrology does not work better than randomness. Also, the supposed accurate results coming from horoscopes correspond to psychological phenomena such as the Barnum or Forer effect which suggest that vague descriptions are capable of fitting for almost any person.\n\nMoreover, due to the dynamic movements of the Earth and solar system around the galaxy, stars never stay quiet in the same place, so that planets never pass through the same constellation after a couple thousand years. Then, the zodiacal signs we have are wrong, because our sky is not the same sky Greeks observed millennia ago.",
+    "comicMedia": [
+      {
+        "type": "image",
+        "src": "assets/images/astrology_image-1.png",
+        "alt": "Astrology figure"
+      }
+    ],
     "comic": "Page in construction, comic goes here.",
+    "podcastMedia": [],
     "podcast": "Page in construction, podcast goes here."
   },
   {
     "key": "chemtrail",
     "label": "Chemtrail",
-    "image": "chemtrail_sign.png",
+    "image": "assets/images/chemtrail_sign.png",
     "title": "According to the conspiracy theory, governments, militaries, or powerful secret organizations are deliberately spraying toxic chemicals or biological agents into the atmosphere from commercial and military airplanes.\nProponents to the conspiracy theory argue that these alleged sprayings are done for sinister purposes, such as:\nWeather modification or climate control.\nMind control or psychological manipulation.\nPopulation control or mass sterilization.\n\nBelievers of the theory argue that “normal” plane trails should disappear within seconds, and they claim that any trail stays in the sky for a long time, spreads out, or forms grid-like patterns must be a “chemtrail”.\nIn reality, the lines in the sky are contrails, which is short for condensation trails [1]. They are a completely natural physical phenomenon [2]. In this section, we will delve into how this works: how they form and why some remain while others disappear, drawing on scientific principles.",
+    "comicMedia": [
+      {
+        "type": "image",
+        "src": "assets/images/chemtrails_image-1.png",
+        "alt": "Chemtrail figure page 1"
+      },
+      {
+        "type": "image",
+        "src": "assets/images/chemtrails_image-2.png",
+        "alt": "Chemtrail figure page 2"
+      },
+      {
+        "type": "image",
+        "src": "assets/images/chemtrails_image-3.png",
+        "alt": "Chemtrail figure page 3"
+      }
+    ],
     "comic": "Page in construction, comic goes here.",
+    "podcastMedia": [],
+    "podcast": "Page in construction, podcast goes here."
+  },
+  {
+    "key": "covid",
+    "label": "COVID",
+    "image": "assets/images/covid_sign.png",
+    "title": "This section can cover the misinformation that grew around the COVID-19 pandemic and the kinds of claims that spread fastest online.",
+    "comicMedia": [],
+    "comic": "Page in construction, comic goes here.",
+    "podcastMedia": [],
+    "podcast": "Page in construction, podcast goes here."
+  },
+  {
+    "key": "fly",
+    "label": "Fly",
+    "image": "assets/images/fly_sign.png",
+    "title": "This section can cover the Fly conspiracy and the broader pattern of claims that try to turn a simple idea into a hidden agenda.",
+    "comicMedia": [],
+    "comic": "Page in construction, comic goes here.",
+    "podcastMedia": [],
+    "podcast": "Page in construction, podcast goes here."
+  },
+  {
+    "key": "moon_landing",
+    "label": "Moon Landing",
+    "image": "assets/images/moon_landing_sign.png",
+    "title": "This section can revisit the moon-landing hoax claim and the evidence that disproves it.",
+    "comicMedia": [],
+    "comic": "Page in construction, comic goes here.",
+    "podcastMedia": [],
+    "podcast": "Page in construction, podcast goes here."
+  },
+  {
+    "key": "numerology",
+    "label": "Numerology",
+    "image": "assets/images/numerology_sign.png",
+    "title": "This section can explain why numerology feels persuasive and why its patterns do not hold up to evidence.",
+    "comicMedia": [],
+    "comic": "Page in construction, comic goes here.",
+    "podcastMedia": [],
+    "podcast": "Page in construction, podcast goes here."
+  },
+  {
+    "key": "ofiuco",
+    "label": "Ofiuco",
+    "image": "assets/images/ofiuco_sign.png",
+    "title": "This section can unpack the Ophiuchus zodiac claim and why it is often misunderstood.",
+    "comicMedia": [],
+    "comic": "Page in construction, comic goes here.",
+    "podcastMedia": [],
     "podcast": "Page in construction, podcast goes here."
   },
   {
     "key": "quantum_healing",
     "label": "Quantum Healing",
-    "image": "quantum_healing_sign.png",
-    "title": "Page in construction, quantum healing goes here.",
+    "image": "assets/images/quantum_healing_sign.png",
+    "title": "Quantum healing mixes wellness language with physics vocabulary, which makes it sound technical even when the claims are unsupported.",
+    "comicMedia": [],
     "comic": "Page in construction, comic goes here.",
+    "podcastMedia": [
+      {
+        "type": "audio",
+        "src": "assets/podcasts/quantum_healing_podcast.mp3",
+        "label": "Quantum Healing podcast"
+      }
+    ],
     "podcast": "Page in construction, podcast goes here."
   },
   {
     "key": "reptilian",
     "label": "Reptilian",
-    "image": "reptilian_sign.png",
+    "image": "assets/images/reptilian_sign.png",
     "title": "The reptilian conspiracy is one of the most famous conspiracy theories in the world; it began in 1999 with the book “ The Biggest Secret: The Book That Will Change the World ” by David Icke ( See Figure 1 ), where David laid out all the bases of Reptilian Theory. The book basically explains two things, the “true world order”, that is ruled by a kind of reptilian men and the real origin of humanity. Both theories are really appealing and they are based on scientific hypotheses and real facts. It became so famous that according to a Reuters/Ipsos poll, one in five people worldwide believed that reptilians were living among humans in disguise in the year 2010.\n\nAfter a decade, science has evolved and the arguments of the conspiracy have collapsed. Here are some examples of this:\n\n“The missing link in human evolution ”: At the beginning of the 21st century, one of the most topics discussed is the missing link in the evolution, some experts ( such as Ernst Haeckel, who earned a Doctorate in Medicine (M.D.) from the University of Berlin ) stated that the evolutionary line of the humanity was incomplete. These assertions were the origin of “ the theory of the real origin of humans “ , which postulated that the reptilian aliens arrived on Earth and then they genetically modified some Homo habilis ( ancestors of humans ) with reptilian DNA for the creation of intelligent slaves.\n\nThese beliefs became even stronger with the research of the American neuroscientist Paul D. MacLean, who theorized that humans possess a reptilian brain through his Triune Brain Theory. Nevertheless, nowadays the mystery around the missing link has been clarified with a better understanding of evolution and a more complete human evolutionary line.",
+    "comicMedia": [
+      {
+        "type": "image",
+        "src": "assets/images/reptilian_image.jpg",
+        "label": "Reptilian figure"
+      }
+    ],
     "comic": "Page in construction, comic goes here.",
+    "podcastMedia": [],
+    "podcast": "Page in construction, podcast goes here."
+  },
+  {
+    "key": "telepathy",
+    "label": "Telepathy",
+    "image": "assets/images/telepathy_sign.png",
+    "title": "This section can examine telepathy claims and why they keep reappearing in popular culture.",
+    "comicMedia": [],
+    "comic": "Page in construction, comic goes here.",
+    "podcastMedia": [],
     "podcast": "Page in construction, podcast goes here."
   },
   {
     "key": "terraplanism",
     "label": "Terraplanism",
-    "image": "terraplanism_sign.png",
+    "image": "assets/images/terraplanism_sign.png",
     "title": "Flat Earth theory is often described as one of the oldest fake news in human history. However, the idea that people believed the Earth was flat until 1522 is incorrect. In fact, the spherical shape of the Earth was already proposed in ancient Greece and later accepted among scholars. Today, with modern science and technology, it is well established that the Earth is round. Despite this, some people still support flat Earth ideas and question the scientific evidence with argues such as:\n\nimmobility and inertia: If the world turned as fast as science said, humans would fly off the Earth.\n\nLa gravedad como pseudofuerza: The gravity does not have any senses, the objects fall to the floor due to the different of density\n\nBedford Level Experiments: If the Earth had the curvature scientists claim, I could not look at ships far from the coast\n\nTo understand this phenomenon, it can be useful to explore these arguments and compare them with established findings in physics and astronomy in a debate.",
+    "comicMedia": [],
     "comic": "Page in construction, comic goes here.",
+    "podcastMedia": [],
+    "podcast": "Page in construction, podcast goes here."
+  },
+  {
+    "key": "vaccines",
+    "label": "Vaccines",
+    "image": "assets/images/vaccines_sign.png",
+    "title": "This section can address vaccine misinformation, how it spreads, and the evidence that counters it.",
+    "comicMedia": [],
+    "comic": "Page in construction, comic goes here.",
+    "podcastMedia": [
+      {
+        "type": "video",
+        "src": "assets/podcasts/vaccines_podcast.mp4",
+        "label": "Vaccines podcast video"
+      }
+    ],
     "podcast": "Page in construction, podcast goes here."
   }
 ]
