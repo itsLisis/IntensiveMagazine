@@ -4,7 +4,13 @@
     "label": "3T Atlas",
     "image": "assets/images/3t_atlas_sign.png",
     "title": "3I Atlas was one of the most controversial and viral topics in science in 2025. On July 1st of that year, a telescope of the planet defense complex in Chile observed a point moving in a strange trajectory. It was called 3I Atlas, a comet coming from outer space, the third interstellar object ever discovered to be specific. Its popularity increased exponentially after the publishing of a scientific article called “Is the interstellar object 3I/ATLAS alien technology?” whose main author was Abraham Loeb (Avi Loeb), a Harvard professor who had worked on similar hypotheses before. The paper noticed that comet’s properties such as the trajectory, the angle of entering and the approaching to specific planets were particularly unlikely. Furthermore, the relative position between 3I Atlas and the Earth in its closer point to the sun, for the researchers could be perfect as an strategical pivot for starting an invasion.\n\nA few days after the publication of the article, several news articles began to flood the web. Shocking headlines like “The latest image from 3I Atlas sparks all sorts of theories while NASA remains silent”, “NASA activated the planetary defense protocol against comet 3I/ATLAS” or “Comet 3I/ATLAS revives Stephen Hawking's incredible warning about aliens” went viral in question of hours throughout all cyberspace.\n\nIn addition, although the new evidence and the data that confirmed 3I Atlas was just a strange comet, famous personalities like Elon Musk and Kim Kardashian posted in their X and Instagram profiles their own hypotheses, while Avi Loeb kept making sensationalist statements, causing even more polemics around the interstellar visitor and wave after wave of disinformation.",
-    "comicMedia": [],
+    "comicMedia": [
+      {
+        "type": "image",
+        "src": "assets/images/3t_atlas_image.png",
+        "alt": "3T Atlas figure"
+      }
+    ],
     "comic": "Page in construction, comic goes here.",
     "podcastMedia": [],
     "podcast": "Page in construction, podcast goes here."
@@ -56,7 +62,13 @@
     "label": "COVID",
     "image": "assets/images/covid_sign.png",
     "title": "This section can cover the misinformation that grew around the COVID-19 pandemic and the kinds of claims that spread fastest online.",
-    "comicMedia": [],
+    "comicMedia": [
+      {
+        "type": "image",
+        "src": "assets/images/covid_image.png",
+        "label": "COVID figure"
+      }
+    ],
     "comic": "Page in construction, comic goes here.",
     "podcastMedia": [],
     "podcast": "Page in construction, podcast goes here."
@@ -76,7 +88,43 @@
     "label": "Moon Landing",
     "image": "assets/images/moon_landing_sign.png",
     "title": "This section can revisit the moon-landing hoax claim and the evidence that disproves it.",
-    "comicMedia": [],
+    "comicMedia": [
+      {
+        "type": "image",
+        "src": "assets/images/moonlanding_image-1.png",
+        "label": "Moon landing figure"
+      },
+      {
+        "type": "image",
+        "src": "assets/images/moonlanding_image-2.png",
+        "label": "Moon landing figure"
+      },
+      {
+        "type": "image",
+        "src": "assets/images/moonlanding_image-3.png",
+        "label": "Moon landing figure"
+      },
+      {
+        "type": "image",
+        "src": "assets/images/moonlanding_image-4.png",
+        "label": "Moon landing figure"
+      },
+      {
+        "type": "image",
+        "src": "assets/images/moonlanding_image-5.png",
+        "label": "Moon landing figure"
+      },
+      {
+        "type": "image",
+        "src": "assets/images/moonlanding_image-6.png",
+        "label": "Moon landing figure"
+      },
+      {
+        "type": "image",
+        "src": "assets/images/moonlanding_image-7.png",
+        "label": "Moon landing figure"
+      }
+    ],
     "comic": "Page in construction, comic goes here.",
     "podcastMedia": [],
     "podcast": "Page in construction, podcast goes here."
@@ -85,10 +133,22 @@
     "key": "numerology",
     "label": "Numerology",
     "image": "assets/images/numerology_sign.png",
-    "title": "This section can explain why numerology feels persuasive and why its patterns do not hold up to evidence.",
-    "comicMedia": [],
+    "title": "Numbers are, above all, an extraordinarily useful tool: symbols that allow us to describe quantities, understand the world, and develop much of human knowledge. However, for centuries, many cultures attributed mystical properties and hidden meanings to them, a speculation that even attracted brilliant figures such as Isaac Newton. Today, the idea that numbers possess magical powers or can influence our destiny has no scientific support, yet it remains a widespread belief. So, what can the experiences of those who have trusted in these ideas tell us, and what can we learn from their stories?",
+    "comicMedia": [
+      {
+        "type": "image",
+        "src": "assets/images/numerology_image.png",
+        "label": "Numerology figure"
+      }
+    ],
     "comic": "Page in construction, comic goes here.",
-    "podcastMedia": [],
+    "podcastMedia": [
+      {
+        "type": "audio",
+        "src": "assets/podcasts/numerology_podcast.mp3",
+        "label": "Numerology podcast"
+      }
+    ],
     "podcast": "Page in construction, podcast goes here."
   },
   {
@@ -138,7 +198,18 @@
     "label": "Telepathy",
     "image": "assets/images/telepathy_sign.png",
     "title": "This section can examine telepathy claims and why they keep reappearing in popular culture.",
-    "comicMedia": [],
+    "comicMedia": [
+      {
+        "type": "image",
+        "src": "assets/images/telepathy_image-1.png",
+        "label": "Telepathy figure"
+      },
+      {
+        "type": "image",
+        "src": "assets/images/telepathy_image-2.png",
+        "label": "Telepathy figure"
+      }
+    ],
     "comic": "Page in construction, comic goes here.",
     "podcastMedia": [],
     "podcast": "Page in construction, podcast goes here."
@@ -150,7 +221,13 @@
     "title": "Flat Earth theory is often described as one of the oldest fake news in human history. However, the idea that people believed the Earth was flat until 1522 is incorrect. In fact, the spherical shape of the Earth was already proposed in ancient Greece and later accepted among scholars. Today, with modern science and technology, it is well established that the Earth is round. Despite this, some people still support flat Earth ideas and question the scientific evidence with argues such as:\n\nimmobility and inertia: If the world turned as fast as science said, humans would fly off the Earth.\n\nLa gravedad como pseudofuerza: The gravity does not have any senses, the objects fall to the floor due to the different of density\n\nBedford Level Experiments: If the Earth had the curvature scientists claim, I could not look at ships far from the coast\n\nTo understand this phenomenon, it can be useful to explore these arguments and compare them with established findings in physics and astronomy in a debate.",
     "comicMedia": [],
     "comic": "Page in construction, comic goes here.",
-    "podcastMedia": [],
+    "podcastMedia": [
+      {
+        "type": "audio",
+        "src": "assets/podcasts/flat_earthing_podcast.mp3",
+        "label": "Terraplanism podcast"
+      }
+    ],
     "podcast": "Page in construction, podcast goes here."
   },
   {
