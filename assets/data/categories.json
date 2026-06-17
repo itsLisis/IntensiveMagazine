@@ -235,9 +235,9 @@
     "comic": "",
     "podcastMedia": [
       {
-        "type": "video",
-        "src": "assets/podcasts/vaccines_podcast.mp4",
-        "label": "Vaccines podcast video"
+        "type": "audio",
+        "src": "assets/podcasts/vaccines_podcast.mp3",
+        "label": "Vaccines podcast audio"
       }
     ],
     "podcast": ""
