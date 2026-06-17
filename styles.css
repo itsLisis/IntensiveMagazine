@@ -37,6 +37,44 @@ body {
     backdrop-filter: blur(10px);
 }
 
+.header-brand {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+#mode-switcher {
+    display: flex;
+    gap: 0.5rem;
+    background: rgba(30, 28, 26, 0.06);
+    padding: 0.25rem;
+    border-radius: 999px;
+}
+
+.mode-btn {
+    border: none;
+    background: transparent;
+    padding: 0.5rem 1.25rem;
+    border-radius: 999px;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #5c5249;
+    cursor: pointer;
+    transition: all 180ms ease;
+}
+
+.mode-btn:hover {
+    color: #1e1c1a;
+}
+
+.mode-btn.active {
+    background: #fff;
+    color: #1e1c1a;
+    box-shadow: 0 4px 12px rgba(53, 40, 26, 0.12);
+}
+
 #header h1 {
     margin: 0;
     font-size: clamp(1.4rem, 2vw, 2rem);

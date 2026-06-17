@@ -1,30 +1,52 @@
 const contentElement = document.getElementById('content');
 const menuListElement = document.querySelector('#menu ul');
+const menuContainer = document.getElementById('menu');
 const menuViewportElement = document.querySelector('#menu .menu-viewport');
 const menuPrevButton = document.getElementById('menu-prev');
 const menuNextButton = document.getElementById('menu-next');
-const headerLinks = Array.from(document.querySelectorAll('#header a'));
+const sectionNavList = document.querySelector('#section-nav ul');
+const btnHoroscope = document.getElementById('btn-horoscope');
+const btnClasswork = document.getElementById('btn-classwork');
+let headerLinks = Array.from(document.querySelectorAll('#section-nav a'));
 let categories = [];
 let activeCategory = null;
 let isNormalizingMenuScroll = false;
 let menuLoopResetTimer = null;
+let currentMode = 'horoscope';
 
 function setHeaderTargets() {
 	headerLinks.forEach((link) => {
 		const label = link.textContent.trim().toLowerCase();
 
-		if (label === 'title') {
+		if (label === 'title' || label === 'description') {
 			link.href = '#title-section';
-		}
-
-		if (label === 'media') {
+		} else if (label === 'media') {
 			link.href = '#media-section';
-		}
-
-		if (label === 'podcast') {
+		} else if (label === 'podcast') {
 			link.href = '#podcast-section';
+		} else if (label === 'summary') {
+			link.href = '#summary-section';
+		} else if (label === 'review') {
+			link.href = '#review-section';
 		}
 	});
+
+	// Re-attach listeners to new links
+	headerLinks.forEach((link) => {
+		link.addEventListener('click', handleNavClick);
+	});
+}
+
+function handleNavClick(event) {
+	const targetId = event.currentTarget.getAttribute('href');
+	const targetElement = targetId ? document.querySelector(targetId) : null;
+
+	if (!targetElement) {
+		return;
+	}
+
+	event.preventDefault();
+	targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 function renderMediaItem(mediaItem) {
@@ -185,24 +207,93 @@ function renderCategory(category) {
 	document.title = `${category.label} | DebunkTheJunk`;
 }
 
-function activateCategory(category) {
-	renderCategory(category);
+function renderClasswork() {
+	sectionNavList.innerHTML = `
+		<li><a href="#summary-section">Summary</a></li>
+		<li><a href="#review-section">Review</a></li>
+	`;
+	
+	headerLinks = Array.from(document.querySelectorAll('#section-nav a'));
+	setHeaderTargets();
+
+	const summaryMedia = [
+		{ type: 'image', src: 'assets/classwork/summary_1.png', alt: 'Summary image 1' },
+		{ type: 'image', src: 'assets/classwork/summary_2.png', alt: 'Summary image 2' },
+	];
+
+	const reviewMedia = [
+		{ type: 'image', src: 'assets/classwork/review.png', alt: 'Review image' }
+	];
+
+	const summarySection = `
+		<section id="summary-section" class="category-section">
+			<h2>Summary</h2>
+			${renderMediaSection(summaryMedia, 'Summary images')}
+		</section>
+	`;
+
+	const reviewSection = `
+		<section id="review-section" class="category-section">
+			<h2>Review</h2>
+			${renderMediaSection(reviewMedia, 'Review image')}
+		</section>
+	`;
+
+	contentElement.innerHTML = `
+		<article class="category-view" data-category="classwork">
+			${summarySection}
+			${reviewSection}
+		</article>
+	`;
+	document.title = `Our Classwork | DebunkTheJunk`;
+}
+
+function updateModeView() {
+	if (currentMode === 'horoscope') {
+		menuContainer.style.display = 'flex';
+		btnHoroscope.classList.add('active');
+		btnClasswork.classList.remove('active');
+		
+		sectionNavList.innerHTML = `
+			<li><a href="#title-section">Description</a></li>
+			<li><a href="#media-section">Media</a></li>
+			<li><a href="#podcast-section">Podcast</a></li>
+		`;
+		headerLinks = Array.from(document.querySelectorAll('#section-nav a'));
+		setHeaderTargets();
+
+		if (activeCategory) {
+			renderCategory(activeCategory);
+		}
+	} else if (currentMode === 'classwork') {
+		menuContainer.style.display = 'none';
+		btnClasswork.classList.add('active');
+		btnHoroscope.classList.remove('active');
+		
+		renderClasswork();
+	}
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-headerLinks.forEach((link) => {
-	link.addEventListener('click', (event) => {
-		const targetId = link.getAttribute('href');
-		const targetElement = targetId ? document.querySelector(targetId) : null;
-
-		if (!targetElement) {
-			return;
-		}
-
-		event.preventDefault();
-		targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+if (btnHoroscope) {
+	btnHoroscope.addEventListener('click', () => {
+		currentMode = 'horoscope';
+		updateModeView();
 	});
-});
+}
+
+if (btnClasswork) {
+	btnClasswork.addEventListener('click', () => {
+		currentMode = 'classwork';
+		updateModeView();
+	});
+}
+
+function activateCategory(category) {
+	if (currentMode !== 'horoscope') return;
+	renderCategory(category);
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 
 if (menuListElement) {
 	menuListElement.addEventListener('click', (event) => {
