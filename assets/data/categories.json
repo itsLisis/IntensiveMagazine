@@ -61,7 +61,7 @@
     "key": "covid",
     "label": "COVID",
     "image": "assets/images/covid_sign.png",
-    "title": "This section can cover the misinformation that grew around the COVID-19 pandemic and the kinds of claims that spread fastest online.",
+    "title": "Some fictitious and pseudoscientific claims, as well as conspiracy theories, were associated with the spread of COVID-19 at the beginning of the pandemic, because the disease was new and information was changing rapidly. Those who believed these theories spread misinformation, claiming that the virus was the result of laboratory manipulation, that it had been created to generate profit through the distribution of new vaccines, or that it contained a microchip to manipulate society. This had devastating consequences for how people cared for themselves and their loved ones, due to a lack of trust in the medical profession.",
     "comicMedia": [
       {
         "type": "image",
@@ -77,7 +77,7 @@
     "key": "fly",
     "label": "Fly",
     "image": "assets/images/fly_sign.png",
-    "title": "This section can cover the Fly conspiracy and the broader pattern of claims that try to turn a simple idea into a hidden agenda.",
+    "title": "In recent months, headlines and social media posts claimed that scientists had 'uploaded a fly's consciousness into a computer' or even created a 'digital living organism.' These statements quickly spread online, but they do not accurately describe what was achieved. In reality, Eon Systems developed a virtual fruit fly controlled by a brain model derived from the complete connectome of a real fruit fly. The connectome, which contains approximately 140,000 neurons and 50 million synaptic connections, was integrated with a simulated body capable of interacting with a virtual environment. As a result, the digital fly was able to perform behaviors such as walking, grooming, and searching for food. The project represents an important step in computational neuroscience because it explores how complex behavior can emerge from the structure of a biological neural network. However, the simulation is not a living organism and does not demonstrate consciousness; it is a computational model designed to study the relationship between brain structure and behavior.",
     "comicMedia": [
       {
         "type": "video",
@@ -93,7 +93,7 @@
     "key": "moon_landing",
     "label": "Moon Landing",
     "image": "assets/images/moon_landing_sign.png",
-    "title": "This section can revisit the moon-landing hoax claim and the evidence that disproves it.",
+    "title": "One of the most well-known conspiracy theories of the 20th century claims that the human landing on the Moon was a hoax staged by the United States government to feign a technological victory during the Cold War. According to this theory, the Apollo program missions, especially the Apollo 11 moon landing in 1969, were filmed in a television studio and presented to the world as if they had actually taken place on the lunar surface. However, this claim lacks solid evidence and contradicts a wealth of scientific and historical evidence. The moon landing was tracked in real time by observatories and tracking stations in various countries, including some that were political rivals of the United States, such as the then Soviet Union. Furthermore, the Apollo missions brought back hundreds of kilograms of lunar rocks that have been studied by scientists worldwide, and whose characteristics are consistent with an extraterrestrial origin. Photographs, communications records, laser measurements taken to date, and subsequent evidence obtained by space probes that have photographed the landing sites constitute independent proof that astronauts did indeed reach the Moon. For these reasons, the scientific and historical community considers the fake moon landing hypothesis to be an unfounded conspiracy theory, while the arrival of humans on the Moon in 1969 is among the best-documented events in modern history.",
     "comicMedia": [
       {
         "type": "image",
@@ -193,7 +193,7 @@
     "key": "telepathy",
     "label": "Telepathy",
     "image": "assets/images/telepathy_sign.png",
-    "title": "This section can examine telepathy claims and why they keep reappearing in popular culture.",
+    "title": "Due to its implications for physics, biology, and the understanding of the human mind, psychokinesis has been the subject of scientific study for over half a century. Various researchers have attempted to demonstrate its existence through controlled experiments, particularly using random number generators and other systems designed to detect potential mental influences on physical processes. However, the results obtained have been inconsistent and have not been reliably reproducible, a fundamental requirement for validating any scientific phenomenon. For this reason, most scientists believe that the available evidence does not support the existence of psychokinesis and that the apparent demonstrations of this phenomenon can be best explained by experimental errors, cognitive biases, or misinterpretations of statistical coincidences.",
     "comicMedia": [
       {
         "type": "image",
@@ -230,7 +230,7 @@
     "key": "vaccines",
     "label": "Vaccines",
     "image": "assets/images/vaccines_sign.png",
-    "title": "This section can address vaccine misinformation, how it spreads, and the evidence that counters it.",
+    "title": "The belief that vaccines cause autism is one of the most widespread myths in public health. This idea originated from a study published in 1998 that was later proven fraudulent and retracted from the scientific literature. Since then, numerous studies involving millions of children have consistently found no causal link between vaccines and autism spectrum disorder (ASD). While the exact causes of autism are still being researched, scientific evidence indicates that they are primarily related to genetic and early developmental factors, not vaccination.",
     "comicMedia": [],
     "comic": "",
     "podcastMedia": [
