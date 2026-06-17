@@ -11,9 +11,9 @@
         "alt": "3T Atlas figure"
       }
     ],
-    "comic": "Page in construction, comic goes here.",
+    "comic": "",
     "podcastMedia": [],
-    "podcast": "Page in construction, podcast goes here."
+    "podcast": ""
   },
   {
     "key": "astrology",
@@ -27,9 +27,9 @@
         "alt": "Astrology figure"
       }
     ],
-    "comic": "Page in construction, comic goes here.",
+    "comic": "",
     "podcastMedia": [],
-    "podcast": "Page in construction, podcast goes here."
+    "podcast": ""
   },
   {
     "key": "chemtrail",
@@ -53,9 +53,9 @@
         "alt": "Chemtrail figure page 3"
       }
     ],
-    "comic": "Page in construction, comic goes here.",
+    "comic": "",
     "podcastMedia": [],
-    "podcast": "Page in construction, podcast goes here."
+    "podcast": ""
   },
   {
     "key": "covid",
@@ -69,19 +69,25 @@
         "label": "COVID figure"
       }
     ],
-    "comic": "Page in construction, comic goes here.",
+    "comic": "",
     "podcastMedia": [],
-    "podcast": "Page in construction, podcast goes here."
+    "podcast": ""
   },
   {
     "key": "fly",
     "label": "Fly",
     "image": "assets/images/fly_sign.png",
     "title": "This section can cover the Fly conspiracy and the broader pattern of claims that try to turn a simple idea into a hidden agenda.",
-    "comicMedia": [],
-    "comic": "Page in construction, comic goes here.",
+    "comicMedia": [
+      {
+        "type": "video",
+        "src": "assets/videos/fly_video.mp4",
+        "label": "Fly figure"
+      }
+    ],
+    "comic": "",
     "podcastMedia": [],
-    "podcast": "Page in construction, podcast goes here."
+    "podcast": ""
   },
   {
     "key": "moon_landing",
@@ -125,9 +131,9 @@
         "label": "Moon landing figure"
       }
     ],
-    "comic": "Page in construction, comic goes here.",
+    "comic": "",
     "podcastMedia": [],
-    "podcast": "Page in construction, podcast goes here."
+    "podcast": ""
   },
   {
     "key": "numerology",
@@ -141,7 +147,7 @@
         "label": "Numerology figure"
       }
     ],
-    "comic": "Page in construction, comic goes here.",
+    "comic": "",
     "podcastMedia": [
       {
         "type": "audio",
@@ -149,17 +155,7 @@
         "label": "Numerology podcast"
       }
     ],
-    "podcast": "Page in construction, podcast goes here."
-  },
-  {
-    "key": "ofiuco",
-    "label": "Ofiuco",
-    "image": "assets/images/ofiuco_sign.png",
-    "title": "This section can unpack the Ophiuchus zodiac claim and why it is often misunderstood.",
-    "comicMedia": [],
-    "comic": "Page in construction, comic goes here.",
-    "podcastMedia": [],
-    "podcast": "Page in construction, podcast goes here."
+    "podcast": ""
   },
   {
     "key": "quantum_healing",
@@ -167,7 +163,7 @@
     "image": "assets/images/quantum_healing_sign.png",
     "title": "Quantum healing mixes wellness language with physics vocabulary, which makes it sound technical even when the claims are unsupported.",
     "comicMedia": [],
-    "comic": "Page in construction, comic goes here.",
+    "comic": "",
     "podcastMedia": [
       {
         "type": "audio",
@@ -175,7 +171,7 @@
         "label": "Quantum Healing podcast"
       }
     ],
-    "podcast": "Page in construction, podcast goes here."
+    "podcast": ""
   },
   {
     "key": "reptilian",
@@ -189,9 +185,9 @@
         "label": "Reptilian figure"
       }
     ],
-    "comic": "Page in construction, comic goes here.",
+    "comic": "",
     "podcastMedia": [],
-    "podcast": "Page in construction, podcast goes here."
+    "podcast": ""
   },
   {
     "key": "telepathy",
@@ -210,9 +206,9 @@
         "label": "Telepathy figure"
       }
     ],
-    "comic": "Page in construction, comic goes here.",
+    "comic": "",
     "podcastMedia": [],
-    "podcast": "Page in construction, podcast goes here."
+    "podcast": ""
   },
   {
     "key": "terraplanism",
@@ -220,7 +216,7 @@
     "image": "assets/images/terraplanism_sign.png",
     "title": "Flat Earth theory is often described as one of the oldest fake news in human history. However, the idea that people believed the Earth was flat until 1522 is incorrect. In fact, the spherical shape of the Earth was already proposed in ancient Greece and later accepted among scholars. Today, with modern science and technology, it is well established that the Earth is round. Despite this, some people still support flat Earth ideas and question the scientific evidence with argues such as:\n\nimmobility and inertia: If the world turned as fast as science said, humans would fly off the Earth.\n\nLa gravedad como pseudofuerza: The gravity does not have any senses, the objects fall to the floor due to the different of density\n\nBedford Level Experiments: If the Earth had the curvature scientists claim, I could not look at ships far from the coast\n\nTo understand this phenomenon, it can be useful to explore these arguments and compare them with established findings in physics and astronomy in a debate.",
     "comicMedia": [],
-    "comic": "Page in construction, comic goes here.",
+    "comic": "",
     "podcastMedia": [
       {
         "type": "audio",
@@ -228,7 +224,7 @@
         "label": "Terraplanism podcast"
       }
     ],
-    "podcast": "Page in construction, podcast goes here."
+    "podcast": ""
   },
   {
     "key": "vaccines",
@@ -236,7 +232,7 @@
     "image": "assets/images/vaccines_sign.png",
     "title": "This section can address vaccine misinformation, how it spreads, and the evidence that counters it.",
     "comicMedia": [],
-    "comic": "Page in construction, comic goes here.",
+    "comic": "",
     "podcastMedia": [
       {
         "type": "video",
@@ -244,6 +240,6 @@
         "label": "Vaccines podcast video"
       }
     ],
-    "podcast": "Page in construction, podcast goes here."
+    "podcast": ""
   }
 ]

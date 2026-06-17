@@ -1,8 +1,13 @@
 const contentElement = document.getElementById('content');
 const menuListElement = document.querySelector('#menu ul');
+const menuViewportElement = document.querySelector('#menu .menu-viewport');
+const menuPrevButton = document.getElementById('menu-prev');
+const menuNextButton = document.getElementById('menu-next');
 const headerLinks = Array.from(document.querySelectorAll('#header a'));
 let categories = [];
 let activeCategory = null;
+let isNormalizingMenuScroll = false;
+let menuLoopResetTimer = null;
 
 function setHeaderTargets() {
 	headerLinks.forEach((link) => {
@@ -12,8 +17,8 @@ function setHeaderTargets() {
 			link.href = '#title-section';
 		}
 
-		if (label === 'comic') {
-			link.href = '#comic-section';
+		if (label === 'media') {
+			link.href = '#media-section';
 		}
 
 		if (label === 'podcast') {
@@ -48,14 +53,24 @@ function renderMediaItem(mediaItem) {
 
 function renderMediaSection(mediaItems, fallbackAlt) {
 	if (!Array.isArray(mediaItems) || mediaItems.length === 0) {
-		return `
-			<div class="media-placeholder">
-				<img src="assets/images/maintenance_page.jpg" alt="${fallbackAlt}">
-			</div>
-		`;
+		return '';
 	}
 
 	return `<div class="media-grid">${mediaItems.map(renderMediaItem).join('')}</div>`;
+}
+
+function getRenderableText(text) {
+	if (typeof text !== 'string') {
+		return '';
+	}
+
+	const trimmedText = text.trim();
+
+	if (!trimmedText || trimmedText.toLowerCase().startsWith('page in construction')) {
+		return '';
+	}
+
+	return trimmedText;
 }
 
 function renderMenu() {
@@ -63,13 +78,68 @@ function renderMenu() {
 		return;
 	}
 
-	menuListElement.innerHTML = categories
+	const menuItemsMarkup = categories
 		.map((category) => `
 			<li>
 				<img src="${category.image}" alt="${category.label} sign" data-category-key="${category.key}" role="button" tabindex="0">
 			</li>
 		`)
 		.join('');
+
+	menuListElement.innerHTML = [menuItemsMarkup, menuItemsMarkup, menuItemsMarkup].join('');
+}
+
+function updateMenuArrowState() {
+	if (!menuPrevButton || !menuNextButton) {
+		return;
+	}
+
+	menuPrevButton.disabled = false;
+	menuNextButton.disabled = false;
+}
+
+function scrollMenu(direction) {
+	if (!menuViewportElement) {
+		return;
+	}
+
+	const scrollAmount = Math.max(220, menuViewportElement.clientWidth * 0.7);
+	menuViewportElement.scrollBy({
+		left: direction * scrollAmount,
+		behavior: 'smooth'
+	});
+}
+
+function getMenuLoopWidth() {
+	if (!menuListElement || categories.length === 0) {
+		return 0;
+	}
+
+	return menuListElement.scrollWidth / 3;
+}
+
+function normalizeMenuScrollPosition() {
+	if (!menuViewportElement || !menuListElement || isNormalizingMenuScroll) {
+		return;
+	}
+
+	const loopWidth = getMenuLoopWidth();
+
+	if (!loopWidth) {
+		return;
+	}
+
+	const { scrollLeft } = menuViewportElement;
+
+	if (scrollLeft < loopWidth * 0.5) {
+		isNormalizingMenuScroll = true;
+		menuViewportElement.scrollLeft = scrollLeft + loopWidth;
+		isNormalizingMenuScroll = false;
+	} else if (scrollLeft > loopWidth * 1.5) {
+		isNormalizingMenuScroll = true;
+		menuViewportElement.scrollLeft = scrollLeft - loopWidth;
+		isNormalizingMenuScroll = false;
+	}
 }
 
 function getCategoryByKey(key) {
@@ -78,6 +148,28 @@ function getCategoryByKey(key) {
 
 function renderCategory(category) {
 	activeCategory = category;
+	const mediaText = getRenderableText(category.comic);
+	const hasMediaItems = Array.isArray(category.comicMedia) && category.comicMedia.length > 0;
+	const mediaSection = mediaText || hasMediaItems
+		? `
+			<section id="media-section" class="category-section">
+				<h2>Media</h2>
+				${mediaText ? `<p>${mediaText}</p>` : ''}
+				${hasMediaItems ? renderMediaSection(category.comicMedia, 'Maintenance page') : ''}
+			</section>
+		`
+		: '';
+	const podcastText = getRenderableText(category.podcast);
+	const hasPodcastItems = Array.isArray(category.podcastMedia) && category.podcastMedia.length > 0;
+	const podcastSection = podcastText || hasPodcastItems
+		? `
+			<section id="podcast-section" class="category-section">
+				<h2>Podcast</h2>
+				${podcastText ? `<p>${podcastText}</p>` : ''}
+				${hasPodcastItems ? renderMediaSection(category.podcastMedia, 'Maintenance page') : ''}
+			</section>
+		`
+		: '';
 
 	contentElement.innerHTML = `
 		<article class="category-view" data-category="${category.key}">
@@ -85,16 +177,8 @@ function renderCategory(category) {
 				<h2>${category.label}</h2>
 				<p>${category.title}</p>
 			</section>
-			<section id="comic-section" class="category-section">
-				<h2>Comic</h2>
-				<p>${category.comic}</p>
-				${renderMediaSection(category.comicMedia, 'Maintenance page')}
-			</section>
-			<section id="podcast-section" class="category-section">
-				<h2>Podcast</h2>
-				<p>${category.podcast}</p>
-				${renderMediaSection(category.podcastMedia, 'Maintenance page')}
-			</section>
+			${mediaSection}
+			${podcastSection}
 		</article>
 	`;
 
@@ -154,6 +238,29 @@ if (menuListElement) {
 
 setHeaderTargets();
 
+if (menuPrevButton) {
+	menuPrevButton.addEventListener('click', () => {
+		scrollMenu(-1);
+	});
+}
+
+if (menuNextButton) {
+	menuNextButton.addEventListener('click', () => {
+		scrollMenu(1);
+	});
+}
+
+if (menuViewportElement) {
+	menuViewportElement.addEventListener('scroll', () => {
+		updateMenuArrowState();
+	});
+	menuViewportElement.addEventListener('scrollend', () => {
+		normalizeMenuScrollPosition();
+		updateMenuArrowState();
+	});
+	window.addEventListener('resize', updateMenuArrowState);
+}
+
 async function loadCategories() {
 	try {
 		const response = await fetch('assets/data/categories.json');
@@ -171,9 +278,9 @@ async function loadCategories() {
 				label: '3T Atlas',
 				image: 'assets/images/3t_atlas_sign.png',
 				title: 'A map of hidden patterns and networks that claim to explain how the world is controlled.',
-				comic: 'The comic can show the idea as a visual conspiracy board, with clues linked by arrows and symbols.',
+				comic: '',
 				comicMedia: [],
-				podcast: 'The podcast can unpack how this narrative spreads, what people believe about it, and why it appeals.',
+				podcast: '',
 				podcastMedia: []
 			}
 		];
@@ -183,6 +290,17 @@ async function loadCategories() {
 async function initialize() {
 	categories = await loadCategories();
 	renderMenu();
+	if (menuViewportElement) {
+		window.requestAnimationFrame(() => {
+			const loopWidth = getMenuLoopWidth();
+
+			if (loopWidth) {
+				menuViewportElement.scrollLeft = loopWidth;
+			}
+
+			updateMenuArrowState();
+		});
+	}
 
 	activeCategory = categories[0] || null;
 
